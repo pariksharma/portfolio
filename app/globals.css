@@ -142,3 +142,8 @@
   }
 }
 
+
+
+.display_scroll_bar{scrollbar-width: thin; scrollbar-color: #03f949 !important; overflow: hidden; overflow-y: auto;}
+.display_scroll_bar ul
+.display_scroll_bar::-webkit-scrollbar{width: 2px; color: #03f949;}
