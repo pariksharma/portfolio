@@ -98,7 +98,7 @@ const Work = () => {
     <motion.div 
       initial={{opacity: 0}}
       animate={{opacity: 1, transition: {delay: 2.4, duration: 0.4, ease: 'easeIn'}}}
-      className='min-h-[80vh] flex flec-col justify-center py-12 xl:py-0'
+      className='min-h-[80vh] flex flex-col justify-center py-12 xl:py-0'
     >
       <div className='w-full md:mx-[110px] mx-auto'>
         <div className='flex flex-col xl:flex-row xl:gap-[50px] xl:ml-[100px]'>
