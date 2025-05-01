@@ -15,59 +15,59 @@ const Projects = [
     num: '01',
     category: 'frontend',
     title: 'project 1',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit modi nostrum vitae magni, debitis in',
+    description: 'Developed a high-traffic Next.js platform handling 50–70 lakh users, with efficient server-side rendering, optimized performance, live streaming integration, and real-time chat features for enhanced user engagement.',
     stack: [
-      {name: 'HTML 5'}, {name: 'CSS 3'}, {name: 'JavaScript'}, {name: 'React JS'},
+      {name: 'HTML 5'}, {name: 'CSS 3'}, {name: 'Bootstrap'}, {name: 'Javascript'}, {name: 'Next JS'},
     ],
-    image: '/assets/work/thumb1.png',
-    live: '',
+    image: '/assets/work/project1.jpg',
+    live: 'https://nexttoppers.com',
     github: '',
   },
   {
     num: '02',
     category: 'frontend',
     title: 'project 2',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit modi nostrum vitae magni, debitis in',
+    description: 'Contributed to Physics Galaxy Online, a React js based edtech platform enabling interactive video learning for lakhs of students.',
     stack: [
       {name: 'HTML 5'}, {name: 'CSS 3'}, {name: 'Bootstrap'}, {name: 'React JS'}, {name: 'Redux'},
     ],
-    image: '/assets/work/thumb2.png',
-    live: '',
+    image: '/assets/work/project2.jpg',
+    live: 'https://online.physicsgalaxy.com/',
     github: '',
   },
   {
     num: '03',
     category: 'frontend',
     title: 'project 3',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit modi nostrum vitae magni, debitis in',
+    description: 'Contributed to the development of Exampur, a high-traffic educational platform designed to assist students in preparing for various government exams. Implemented key frontend features using Next.js, focusing on performance optimization, responsive design, and seamless user experience.',
     stack: [
       {name: 'Bootstrap'}, {name: 'JavaScript'}, {name: 'React JS'}, {name: 'Redux'},
     ],
-    image: '/assets/work/thumb3.png',
-    live: '',
+    image: '/assets/work/project3.jpg',
+    live: 'https://app.exampur.com/',
     github: '',
   },
   {
     num: '04',
     category: 'frontend',
     title: 'project 4',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit modi nostrum vitae magni, debitis in',
+    description: 'Developed a responsive and interactive personal portfolio website using React.js and Tailwind CSS, showcasing projects, skills, and experience. Deployed on Netlify for continuous integration and seamless updates.​',
     stack: [
-      {name: 'HTML 5'}, {name: 'CSS 3'}, {name: 'JavaScript'}, {name: 'React JS'}, {name: 'Zustand'},
+      {name: 'HTML 5'}, {name: 'CSS 3'}, {name: 'JavaScript'}, {name: 'React JS'},
     ],
-    image: '/assets/work/thumb1.png',
-    live: '',
+    image: '/assets/work/project4.jpg',
+    live: 'https://velvety-crisp-27f069.netlify.app/',
     github: '',
   },
   {
     num: '05',
     category: 'frontend',
     title: 'project 5',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit modi nostrum vitae magni, debitis in',
+    description: 'Built a modern and fully responsive eCommerce website using React.js, featuring dynamic product listings, cart management, secure checkout, and seamless user experience. Integrated with payment gateways and admin dashboard for product and order management.',
     stack: [
-      {name: 'HTML 5'}, {name: 'CSS 3'}, {name: 'Bootstrap'}, {name: 'Javascript'}, {name: 'Next Js JS'},
+      {name: 'HTML 5'}, {name: 'CSS 3'}, {name: 'JavaScript'}, {name: 'React JS'}, {name: 'Zustand'},
     ],
-    image: '/assets/work/thumb2.png',
+    image: '/assets/work/thumb1.png',
     live: '',
     github: '',
   },
@@ -117,10 +117,10 @@ const Work = () => {
               </ul>
               <div className='border border-white/20'></div>
               <div className='flex items-center gap-4'>
-                <Link href={project.live}>
+                <Link href={project.live} target='_blank'>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
+                      <TooltipTrigger className=' cursor-pointer w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
                         <BsArrowUpRight className='text-white text-3xl group-hover:text-accent' />
                       </TooltipTrigger>
                       <TooltipContent className='bg-[#eee] py-2 px-3 text-sm text-black rounded'>

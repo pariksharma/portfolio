@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 
 const data = {
   title: 'About me',
-  description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus vel consectetur ipsum optio',
+  description: "Over the past 3+ years, I've worked on a variety of frontend projects, ranging from dynamic dashboards to scalable web platforms. I’ve collaborated closely with cross-functional teams, turning complex requirements into intuitive, responsive user interfaces using React.js and supporting libraries. My experience spans building production-grade apps, optimizing performance, and delivering clean, maintainable code.",
   info: [
     {
       fieldName: 'Name',
@@ -46,7 +46,7 @@ const data = {
 const experience = {
   icon: '/assets/resume/badge.svg',
   title: 'My experience',
-  description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus vel consectetur ipsum optio',
+  description: '3+ years of experience building dynamic, responsive web applications using React.js, with a focus on performance, scalability, and clean UI. Experienced in collaborating with teams to deliver production-ready features using Redux, Zustand, and Next.js.',
   items: [
     {
       company: 'AppSquadz Software Pvt Ltd',
@@ -69,7 +69,7 @@ const experience = {
 const education = {
   icon: '/assets/resume/cap.svg',
   title: 'My education',
-  description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus vel consectetur ipsum optio',
+  description: 'Completed B.Tech in Information Technology with a strong foundation in software development and problem-solving.',
   items: [
     {
       institute: 'Internshala',
@@ -91,7 +91,7 @@ const education = {
 
 const skills = {
   title: 'My skills',
-  description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus vel consectetur ipsum optio',
+  description: 'Skilled in frontend development with a strong grasp of Data Structures & Algorithms, and expertise in React.js, Next.js, and modern JavaScript.',
   skillList: [
     {
       icon: <FaHtml5 />,
