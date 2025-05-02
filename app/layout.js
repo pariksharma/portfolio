@@ -25,7 +25,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${jetbrainsMono.variable}`}
       >
-        <Home children = {children} />
+        <Home>
+          {children}
+        </Home>
       </body>
     </html>
   );
