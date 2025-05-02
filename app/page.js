@@ -12,7 +12,7 @@ export default function Home() {
         <div className='flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24'>
           <div className='text-center xl:text-left order-2 xl:order-none'>
             <span className='text-xl'>Software Developer</span>
-            <h1 className='h_one mb-6'>Hello I'm <br/> <span className='text-accent'>Parikshit Sharma</span></h1>
+            <h1 className='h_one mb-6'>Hello I&apos;m <br/> <span className='text-accent'>Parikshit Sharma</span></h1>
             <p className='max-w-[500px] mb-9 text-white/80'>Frontend Developer with a strong eye for design and performance, crafting user-centric interfaces using React.js.
             I thrive on solving problems, optimizing user journeys, and creating delightful web experiences.</p>
             <div className='flex flex-col xl:flex-row items-center gap-8'>
