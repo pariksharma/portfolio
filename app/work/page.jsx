@@ -57,7 +57,7 @@ const Projects = [
     ],
     image: '/assets/work/project4.jpg',
     live: 'https://velvety-crisp-27f069.netlify.app/',
-    github: '',
+    github: 'https://github.com/pariksharma/E-Commerce-SEO-Friendly-with-redux',
   },
   {
     num: '05',
@@ -120,7 +120,7 @@ const Work = () => {
                 <Link href={project.live} target='_blank'>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className=' cursor-pointer w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
+                      <TooltipTrigger className='cursor-pointer w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
                         <BsArrowUpRight className='text-white text-3xl group-hover:text-accent' />
                       </TooltipTrigger>
                       <TooltipContent className='bg-[#eee] py-2 px-3 text-sm text-black rounded'>
@@ -129,18 +129,20 @@ const Work = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                <Link href={project.github}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
-                        <BsGithub className='text-white text-3xl group-hover:text-accent' />
-                      </TooltipTrigger>
-                      <TooltipContent className='bg-[#eee] py-2 px-3 text-sm text-black rounded'>
-                        <p>Github repository</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
+                {project.github &&
+                  <Link href={project.github} target='_blank'>
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className='cursor-pointer w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
+                          <BsGithub className='text-white text-3xl group-hover:text-accent' />
+                        </TooltipTrigger>
+                        <TooltipContent className='bg-[#eee] py-2 px-3 text-sm text-black rounded'>
+                          <p>Github repository</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                }
               </div>
             </div>
           </div>

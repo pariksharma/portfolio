@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -27,8 +27,58 @@ const info = [
 ]
 
 import { motion } from 'framer-motion';
+import toast from 'react-hot-toast';
+import { validateForm } from '@/components/utils/helpers';
 
 const Contact = () => {
+
+  const [formData, setFormData] = useState({
+    firstname: '',
+    lastname : '',
+    email: '',
+    phone: '',
+    type: '',
+    message: '',
+  })
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if(validateForm(formData) == 'success') {
+      toast.success('Thank you!', {
+        style: {
+          borderRadius: '10px',
+          background: '#333',
+          color: '#fff',
+        },
+      })
+      setFormData({
+        firstname: '',
+        lastname : '',
+        email: '',
+        phone: '',
+        type: '',
+        message: '',
+      })
+    }
+    else toast.error(validateForm(formData), {
+      style: {
+        borderRadius: '10px',
+        background: '#333',
+        color: '#fff',
+      },
+    })
+    // toast.success('submit')
+  }
+
+  const handlePhone = (e) => {
+    const value = e.target.value.replace(/[^0-9]/g, ''); // allow only numbers
+    if ((value === '' || /^[6-9]/.test(value)) && value.length <= 10) {
+      setFormData({ ...formData, 'phone': e.target.value })
+    }
+  }
+
+  console.log('formData', formData)
+
   return (
     <motion.section 
       initial={{opacity: 0}}
@@ -42,26 +92,62 @@ const Contact = () => {
               <h3 className='text-4xl text-accent'>Let's work together</h3>
               <p className='text-white/60'>Let’s collaborate on your next project! I’m ready to turn your ideas into reality with quality code and seamless design.</p>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                <Input type="firstname" placeholder="Firstname" />
-                <Input type="lastname" placeholder="Lastname" />
-                <Input type="email" placeholder="Email address" />
-                <Input type="phone" placeholder="Phone Number" />
+                <Input 
+                  type="firstname" 
+                  placeholder="Firstname*" 
+                  name= "firstname"
+                  value={formData.firstname}
+                  onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value })}
+                  autoComplete="off"
+                />
+                <Input 
+                  type="lastname" 
+                  placeholder="Lastname*" 
+                  name="lastname"
+                  value={formData.lastname}
+                  onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value })}
+                  autoComplete="off"
+                />
+                <Input 
+                  type="email" 
+                  placeholder="Email address*"
+                  name="email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value })}
+                  autoComplete="off" 
+                />
+                <Input 
+                  type="phone" 
+                  placeholder="Phone Number*" 
+                  name= "phone"
+                  value={formData.phone}
+                  onChange={(e) => handlePhone(e)}
+                  autoComplete="off"
+                />
               </div>
-              <Select>
+              <Select
+                value={formData.type}
+                onValueChange={(value) => setFormData({ ...formData, type: value })}
+              >
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service"></SelectValue>
+                  <SelectValue placeholder="Select a service*"></SelectValue>
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="est">Web Development</SelectItem>
-                    <SelectItem value="cst">UI/UX Design</SelectItem>
-                    <SelectItem value="mst">Figma Design</SelectItem>
+                    <SelectItem value="Web Development">Web Development</SelectItem>
+                    <SelectItem value="UI/UX Design">UI/UX Design</SelectItem>
+                    <SelectItem value="Figma Design">Figma Design</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
-              <Textarea className="h-[200px]" placeholder="Type your message here." />
-              <Button size="md" className="max-w-40 cursor-pointer hover:bg-primary hover:text-accent hover:border-1 hover:border-accent">Send message</Button>
+              <Textarea 
+                className="h-[200px]" 
+                placeholder="Type your message here.*"
+                value={formData.message}
+                onChange = {(e) => setFormData({...formData, 'message':e.target.value})}
+              />
+              <Button onClick = {handleSubmit} size="md" className="max-w-40 cursor-pointer hover:bg-primary hover:text-accent hover:border-1 hover:border-accent">Send message</Button>
             </form>
           </div>
           <div className='flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0'>
