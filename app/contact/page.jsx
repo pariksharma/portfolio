@@ -77,8 +77,6 @@ const Contact = () => {
     }
   }
 
-  console.log('formData', formData)
-
   return (
     <motion.section 
       initial={{opacity: 0}}

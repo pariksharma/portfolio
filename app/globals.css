@@ -147,3 +147,24 @@
 .display_scroll_bar{scrollbar-width: thin; scrollbar-color: #03f949 !important; overflow: hidden; overflow-y: auto;}
 .display_scroll_bar ul
 .display_scroll_bar::-webkit-scrollbar{width: 2px; color: #03f949;}
+
+
+
+/* loader animation */
+
+.initial_loader_container{
+  background-color: #0b1920;
+}
+
+.initial_loader_anim{
+  position: relative;
+  animation: initialLoader 2s linear 0s infinite alternate;
+}
+
+@keyframes initialLoader {
+  0%   {transform: scale(0);}
+  25%  {transform: scale(0.5);}
+  50%  {transform: scale(1);}
+  75%  {transform: scale(0.5);}
+  100% {transform: scale(0);}
+}

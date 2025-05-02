@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import PageTransition from "@/components/ui/PageTransition";
 import StairTransition from "@/components/ui/StairTransition";
 import { Toaster } from "react-hot-toast";
+import Home from "./home/home";
 
 const jetbrainsMono = JetBrains_Mono(
   {
@@ -24,15 +25,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${jetbrainsMono.variable}`}
       >
-        <Toaster
-          position="top-center"
-          reverseOrder={false}
-        />
-        <Header />
-        <StairTransition />
-        <PageTransition>
-          {children}
-        </PageTransition>
+        <Home children = {children} />
       </body>
     </html>
   );
