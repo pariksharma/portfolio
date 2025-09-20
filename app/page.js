@@ -16,7 +16,8 @@ export default function Home() {
             <p className='max-w-[500px] mb-9 text-white/80'>Frontend Developer with a strong eye for design and performance, crafting user-centric interfaces using React.js.
             I thrive on solving problems, optimizing user journeys, and creating delightful web experiences.</p>
             <div className='flex flex-col xl:flex-row items-center gap-8'>
-                <Link href={"https://drive.google.com/file/d/1ROSBpkmfs4Rla1Bh5j0Av564zxb2ztSp/view?usp=drive_link"} target='_blank' className='cursor-pointer'>
+                {/* <Link href={"https://drive.google.com/file/d/1ROSBpkmfs4Rla1Bh5j0Av564zxb2ztSp/view?usp=drive_link"} target='_blank' className='cursor-pointer'> */}
+                <Link href={"https://drive.google.com/file/d/1o06lmTl7r2V3EdVJN5ndZhLNUGmSgWK6/view?usp=sharing"} target='_blank' className='cursor-pointer'>
                   <Button variant="outline" size="lg" className="uppercase flex items-center gap-2 cursor-pointer">
                     <span>Download CV </span>
                     <FiDownload className='text-xl'/>
