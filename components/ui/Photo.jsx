@@ -28,7 +28,7 @@ const Photo = () => {
             quality={100}
             fill
             alt=""
-            className="object-contain overflow-hidden rounded-full mx-auto"
+            className="object-contain overflow-hidden rounded-full mx-auto "
           />
         </motion.div>
         <motion.svg
